@@ -22,19 +22,19 @@
 
             <div class="content_left">
                 <div class="images_layer_1">
-                    <img src="images/q1/1.jpeg" alt="Flowers in Chania">
-                    <img src="images/q1/2.jpg" alt="Flowers in Chania">
+                    <img src="images/q3/fears_of_public_speaking.png" alt="Flowers in Chania">
+                    <img src="images/q3/iStock-1033950644-1024x683.jpg" alt="Flowers in Chania">
                 </div>
                 <div class="images_layer_2">
-                    <img src="images/q1/3.jpg" alt="Flowers in Chania">
-                    <img src="images/q1/5.png" alt="Flowers in Chania">
+                    <img src="images/q3/public-speaking-fear.jpg" alt="Flowers in Chania">
+                    <img src="images/q3/Screenshot 2024-06-07 002652.png" alt="Flowers in Chania">
                 </div>
             </div>
 
             <div class="content_right">
 
                 <div class="description">
-                    <p>A quality of feeling anxious, worried, or alarmed.</p>
+                    <p>Refers to a strong fear of public speaking.</p>
                 </div>
                 <div class="inputAnswer">
                     <input type="text" id="guessInput" placeholder="">
@@ -64,7 +64,7 @@
 <script>
     
 
-const correctAnswer = "nervousness"; // Change this to the correct answer for your images
+const correctAnswer = "glossophobia"; // Change this to the correct answer for your images
 
 function checkGuess() {
     const guessInput = document.getElementById("guessInput");
@@ -72,7 +72,7 @@ const guess = guessInput.value.trim().toLowerCase(); // Trim extra spaces from i
 if (guess === correctAnswer) {
     alert("Congratulations! You guessed the word correctly.");
     // Redirect to another HTML file in the same window
-    window.location.href = "q2.html";
+    window.location.href = "q.html";
 } else {
     alert("Incorrect guess. Try again!");
     guessInput.value = ""; // Clear the input field for another try
