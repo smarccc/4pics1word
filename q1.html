@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4 Pics 1 Word Game</title>
+    <link rel="stylesheet" href="questions.css">
+    
+</head>
+<body>
+
+    <div class="main_container">
+
+        <div class="header">
+
+        </div>
+
+
+        <div class="content">
+
+            <div class="content_left">
+                <div class="images_layer_1">
+                    <img src="images/q1/1.jpeg" alt="Flowers in Chania">
+                    <img src="images/q1/2.jpg" alt="Flowers in Chania">
+                </div>
+                <div class="images_layer_2">
+                    <img src="images/q1/3.jpg" alt="Flowers in Chania">
+                    <img src="images/q1/5.png" alt="Flowers in Chania">
+                </div>
+            </div>
+
+            <div class="content_right">
+                <input type="text" id="guessInput" placeholder="">
+                <button onclick="checkGuess()">Check</button>
+                <div id="letterButtons"></div>
+            </div>
+
+          
+        </div>
+
+        <div class="footer">
+
+        </div>
+    </div>
+
+   
+</body>
+<script>
+    
+
+const correctAnswer = "nervousness"; // Change this to the correct answer for your images
+
+function checkGuess() {
+    const guess = document.getElementById("guessInput").value.toLowerCase();
+    if (guess === correctAnswer) {
+        alert("Congratulations! You guessed the word correctly.");
+        // Redirect to another HTML file
+        window.location.href = "congratulations.html";
+    } else {
+        alert("Incorrect guess. Try again!");
+    }
+}
+
+function createLetterButtons() {
+    const letterButtonsContainer = document.getElementById("letterButtons");
+    for (let i = 0; i < correctAnswer.length; i++) {
+        const button = document.createElement("button");
+        button.className = "letterButton";
+        button.textContent = "_";
+        button.addEventListener("click", function() {
+            this.textContent = correctAnswer[i];
+        });
+        letterButtonsContainer.appendChild(button);
+    }
+}
+
+document.addEventListener("DOMContentLoaded", createLetterButtons);
+</script>
+</html>
